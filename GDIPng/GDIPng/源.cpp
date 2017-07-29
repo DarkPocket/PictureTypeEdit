@@ -234,15 +234,19 @@ int test()
 {
 
 	WCHAR file[MAX_PATH] = L"1234567.jpeg";
-	WCHAR fileDest[MAX_PATH] = L"1234ab.bmp";
+	WCHAR fileDest[MAX_PATH] = L"1234ab.png";
 	WCHAR buf[256] = { 0 };
 
 
 	getExtension(file, buf);
+	wcout << file <<L" 源文件格式  " << buf << endl;
 
 	translatePic(file, fileDest);
 
-	wcout << file << "   " << buf << endl;
+	getExtension(fileDest, buf);
+	wcout << fileDest << L" 目标文件格式  " << buf << endl;
+
+	//wcout << file << "   " << buf << endl;
 
 	return 0;
 }
