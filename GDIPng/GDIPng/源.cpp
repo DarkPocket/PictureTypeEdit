@@ -40,7 +40,7 @@ int   getExtension(WCHAR  filePath[MAX_PATH], WCHAR  fileExten[MAX_PATH])
 		wcscpy_s(fileExten, 1, L"");
 		return -1;
 	}
-	
+
 	wcscpy_s(fileExten, len - pos, &filePath[pos + 1]);
 
 	return 0;
@@ -108,7 +108,7 @@ int translatePic(WCHAR OriFilePath[MAX_PATH], WCHAR destFilePath[MAX_PATH], UINT
 	{
 		wcout << endl;
 	}*/
-	 
+
 	//ÉèÖÃ±àÂë·½Ê½
 	if (!GetEncoderClsid(destPicType, &encoderClsid)) {
 		//		return -4;
@@ -254,7 +254,7 @@ int main()
 
 	test();
 
- 
+
 
 	system("pause");
 	return 0;
